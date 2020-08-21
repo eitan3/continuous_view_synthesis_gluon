@@ -19,8 +19,16 @@ mxnet 2.0.0 can be found here https://dist.mxnet.io/python/all
 
 ### Training
 
-To train the model run the following command 
-
+-- First download the dataset (I only implemented the code for 'car' or 'chair' dataset) from
+[Google Drive](https://drive.google.com/drive/folders/1YbgU-JOXYsGi7yTrYb1F3niXj6nZp4Li?usp=sharing) <br>
+-- Create new folder and extract the dataset to the new folder <br>
+-- Train the model with 
 ```
-python train.py
+python train.py --dataset_path 'new_folder_path'
+```
+<br>
+
+If the new folder is 'C:\Datasets\continuous_view_synthesis_dataset\' the command is:
+```
+python train.py --dataset_path 'C:\Datasets\continuous_view_synthesis_dataset\'
 ```

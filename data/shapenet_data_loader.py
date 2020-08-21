@@ -15,7 +15,11 @@ class ShapeNetDataLoader(mx.io.DataIter):
         self.opt = opt
         self.batch_size = opt.batchSize
         self.category = opt.category
-        self.data_root = 'F:/Datasets/continuous_view_synthesis_datasets/dataset_%s' % opt.category
+
+        dataset_path = opt.dataset_path
+        if dataset_path[-1] == '/':
+            dataset_path = dataset_path[:-1]
+        self.data_root = dataset_path + '/dataset_%s' % opt.category
 
         # (Batch Size, Channels, Height, Width)
         self.data_shapes = (opt.batchSize, 3, self.opt.image_height, self.opt.image_width)
